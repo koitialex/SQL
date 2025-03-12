@@ -48,7 +48,20 @@ update  treino
  set diadasemana = "2025-03-14"
  where tipo = "corrida" and diadasemana = "2025-03-12";
 
+ update cliente
+ set peso = "90.5" , datanascimento = "1980-07-18"
+ where cpf = 12345678900;
+
 --fim atualizar-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+--read-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+select * from treino; 
+--* serve para selecionar todos os dados contidos nessa tabela 
+
+select tipo from treino;
+
+select diadasemana, horario from treino;
+--fim read-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 update  treino
  set horario = "15:00:00"
  where horario in ("08:00:00", "18:00:00")
