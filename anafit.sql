@@ -112,6 +112,24 @@ select * from cliente
 where altura > 1.78 or altura < 1.70;
 
 --fim somar seleção -------------------------------------------------------------------------------------------------------------------------------------------------------------
+--selecionando um dado na tabela que contenha a letra "a"-------------------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT * FROM cliente
+WHERE primeironome LIKE "%a%";
+--selecionando um dado exato na tabela-------------------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT * FROM cliente
+WHERE primeironome LIKE '%Lucas Costa%';
+--selecionando duas colunas na tabela que contenha a letra "a" e "s"-------------------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT * FROM cliente
+WHERE primeironome LIKE '%a%' and sobrenome LIKE '%s%';
+--selecionando duas colunas na tabela com dado exato-------------------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT * FROM cliente
+WHERE primeironome LIKE '%Carlos%' and sobrenome LIKE '%Pereira%';
+--selecionando um dado que contenha um valor com casa decimal-------------------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT * FROM pagamento
+WHERE CAST(valor AS CHAR) LIKE '%150.00%';
+--selecionando um dado que contenha um valor com casa decimal-------------------------------------------------------------------------------------------------------------------------------------------------------------
+SELECT * FROM pagamento
+WHERE CAST(valor AS CHAR) LIKE '%00';
 --criando uma nova tabela-------------------------------------------------------------------------------------------------------------------------------------------------------------
 create table pagamento(
     id_pagamento int auto_increment primary key,
